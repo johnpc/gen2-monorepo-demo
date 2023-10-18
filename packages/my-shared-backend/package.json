@@ -1,0 +1,20 @@
+{
+  "name": "@monorepo/my-shared-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@aws-amplify/amplify-api-next-alpha": "^0.6.0",
+    "@aws-amplify/backend": "^0.2.0-alpha.8",
+    "@aws-amplify/backend-auth": "^0.2.0-alpha.12",
+    "@aws-amplify/backend-cli": "^0.2.0-alpha.8",
+    "@aws-amplify/backend-graphql": "^0.2.0-alpha.10",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
