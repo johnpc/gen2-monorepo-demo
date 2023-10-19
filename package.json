@@ -10,6 +10,7 @@
     "build": "tsc --build --verbose"
   },
   "dependencies": {
+    "aws-amplify": "^5.3.11",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
