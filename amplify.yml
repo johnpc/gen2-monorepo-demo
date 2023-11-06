@@ -15,7 +15,9 @@ applications:
             - npm install
         build:
           commands:
-            - mkdir packages/my-shared-backend/dist && touch packages/my-shared-backend/dist/index.html
+            - pwd
+            - ls
+            - mkdir -p packages/my-shared-backend/dist && touch packages/my-shared-backend/dist/index.html
             - npm run build --workspace=packages/my-shared-backend
       artifacts:
         baseDirectory: packages/my-shared-backend/dist
