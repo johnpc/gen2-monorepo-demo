@@ -19,7 +19,7 @@ applications:
             - ls
             - mkdir dist && touch dist/index.html
       artifacts:
-        baseDirectory: packages/my-shared-backend/dist
+        baseDirectory: dist
         files:
           - '**/*'
       cache:
