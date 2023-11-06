@@ -1,0 +1,29 @@
+version: 1
+applications:
+  - backend:
+      phases:
+        build:
+          commands:
+            - nvm use 18
+            - npm ci
+            - npx amplify --version
+            - npx amplify pipeline-deploy --branch $AWS_BRANCH --appId $AWS_APP_ID
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm install
+        build:
+          commands:
+            - mkdir packages/my-shared-backend/dist && touch packages/my-shared-backend/dist/index.html
+            - npm run build --workspace=packages/my-shared-backend
+      artifacts:
+        baseDirectory: packages/my-shared-backend/dist
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+      buildPath: packages/my-shared-backend
+    appRoot: packages/my-shared-backend
+
