@@ -25,6 +25,6 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-      buildPath: packages/my-shared-backend
+      buildPath: /
     appRoot: packages/my-shared-backend
 
